@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+    <div id="ttt">
+        <div> Tic Tac Toe</div>
+        <div class="layout">
+            <div @click="on()">{{one}}</div>
+            <div @click="tw()">{{two}}</div>
+            <div @click="thre()">{{three}}</div>
+            <div @click="fou()">{{four}}</div>
+            <div @click="fiv()">{{five}}</div>
+            <div @click="si()">{{six}}</div>
+            <div @click="seve()">{{seven}}</div>
+            <div @click="eigh()">{{eight}}</div>
+            <div @click="nin()">{{nine}}</div>
+        </div>
+        <div class="winner">{{winner}}</div>
+        <div><span class="btn">{{button}}</span></div>
+    </div>
+
+    <script src="vue.js"></script>
+    <script src="ttt.js"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: cursive;
+            font-size: 60px;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            width: 40%;
+            margin: 0 auto;
+            grid-gap: 10px;
+            background-color: rgb(51, 106, 224);
+        }
+
+        .layout>div {
+            background-color: rgb(245, 245, 245);
+            color: rgb(51, 106, 224);
+            height: 100px;
+            padding: 0;
+            text-align: center;
+        }
+
+        .layout>div:hover {
+            background-color: rgb(218, 218, 218);
+        }
+
+        .winner {
+            text-align: center;
+            font-family: cursive;
+            font-size: 60px
+        }
+
+        .btn {
+            display: none;
+            background-color: rgb(51, 106, 224);
+            padding: 5px;
+            border-radius: 10px;
+        }
+    </style>
+</body>
+
+</html>
